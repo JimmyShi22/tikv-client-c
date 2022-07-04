@@ -317,6 +317,7 @@ void RegionCache::onRegionStale(Backoffer & bo, RPCContextPtr ctx, const errorpb
 std::pair<std::unordered_map<RegionVerID, std::vector<std::string>>, RegionVerID> RegionCache::groupKeysByRegion(
     Backoffer & bo, const std::vector<std::string> & keys)
 {
+    std::cout << "keys size() is " << keys.size() << std::endl;
     std::unordered_map<RegionVerID, std::vector<std::string>> result_map;
     KeyLocation loc;
     RegionVerID first;
